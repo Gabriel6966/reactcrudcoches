@@ -17,4 +17,18 @@ export default class ServiceCoches{
             })
         })
     }
+
+    insertCoche(coche){
+        return new Promise(function(resolve,reject){
+            let url=Global.urlAPICoches;
+            let request="api/Coches/InsertCoche";
+            axios.post(url+request,coche).then(response=>{
+                console.log("insertando coche");
+                resolve(response.data);
+            }).catch((err)=>{
+                console.log("error al insertar coche", err.message);
+                reject(err);
+            })
+        })
+    }
 }
