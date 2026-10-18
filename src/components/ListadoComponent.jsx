@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Global from "../Gloabal.js"
 import ServiceCoches from '../service/ServiceCoches';
+import { NavLink } from 'react-router-dom';
 
 export default class ListadoComponent extends Component {
 
@@ -48,6 +49,7 @@ export default class ListadoComponent extends Component {
                                     <td>{coche.modelo}</td>
                                     <td>{coche.conductor}</td>
                                     <td>{coche.imagen}</td>
+                                    <NavLink className="rounded-lg bg-slate-100 px-4 py-2 font-medium text-slate-700 hover:bg-slate-200" to={"/editar/"+coche.idCoche}>Editar</NavLink>
                                 </tr>
                             )
                         })

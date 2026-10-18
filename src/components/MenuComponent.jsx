@@ -37,14 +37,14 @@ export default class MenuComponent extends Component {
                         </NavLink>
 
                         <NavLink
-                            to="/detalle/22"
+                            to="/detalle"
                             className="rounded-lg bg-slate-100 px-4 py-2 font-medium text-slate-700 hover:bg-slate-200"
                         >
                             Detalle
                         </NavLink>
 
                         <NavLink
-                            to="/editar"
+                            to="/editar/:idCoche"
                             className="rounded-lg bg-slate-100 px-4 py-2 font-medium text-slate-700 hover:bg-slate-200"
                         >
                             Editar

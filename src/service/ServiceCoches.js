@@ -45,4 +45,19 @@ export default class ServiceCoches{
             })
         })
     }
+
+    editarCoche(coche){
+        return new Promise(function(resolve,reject){
+            let url = Global.urlAPICoches;
+            let request="api/Coches/UpdateCoche";
+            axios.put(url+request,coche).then(response=>{
+                console.log("editando coche");
+                resolve(response.data);
+            }).catch((err)=>{
+                console.log("error al editar coche", err.message);
+                reject(err);
+            })
+        })
+    }
+
 }
