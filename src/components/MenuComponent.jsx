@@ -51,7 +51,7 @@ export default class MenuComponent extends Component {
                         </NavLink>
 
                         <NavLink
-                            to="/eliminar"
+                            to="/eliminar/:idCoche"
                             className="rounded-lg bg-slate-100 px-4 py-2 font-medium text-slate-700 hover:bg-slate-200"
                         >
                             Eliminar
