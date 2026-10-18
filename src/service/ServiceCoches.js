@@ -12,7 +12,7 @@ export default class ServiceCoches{
                 resolve(response.data);
 
             }).catch((err)=>{
-                console.log("error obteniendo coches") + err;
+                console.log("error obteniendo coches", err.message);
                 reject(err);
             })
         })
