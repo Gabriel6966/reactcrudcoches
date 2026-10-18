@@ -40,7 +40,7 @@ export default class CreateCoche extends Component{
     }
 
     render(){
-        if(this.state.status==true){
+        if(this.state.status===true){
             return(<Navigate to="/listado"/>)
         }else{
             return(

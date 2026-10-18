@@ -31,4 +31,18 @@ export default class ServiceCoches{
             })
         })
     }
+
+    detalleCoche(idCoche){
+        return new Promise(function(resolve,reject){
+            let url=Global.urlAPICoches;
+            let request="api/Coches/FindCoche/" + idCoche;
+            axios.get(url+request).then(response=>{
+                console.log("obteniendo detalle coche");
+                resolve(response.data);
+            }).catch((err)=>{
+                console.log("error al obtener detalle coche", err.message);
+                reject(err);
+            })
+        })
+    }
 }
